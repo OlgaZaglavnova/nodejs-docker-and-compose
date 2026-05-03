@@ -6,7 +6,8 @@ services:
       dockerfile: Dockerfile
     image: backend-kupipodariday
     env_file: .env
-    ports: ${BACKEND_PORT}:3000
+    ports: 
+      - "${BACKEND_PORT}:3000"
     networks:
       - internal_network
   frontend:
@@ -16,7 +17,8 @@ services:
       dockerfile: Dockerfile
     image: frontend-kupipodariday
     env_file: .env
-    ports: ${FRONTEND_PORT}:80
+    ports: 
+      - "${FRONTEND_PORT}:80"
     networks:
       - external_network
   pg:
@@ -24,14 +26,16 @@ services:
     image: postgres:18-alpine
     env_file: .env
     volumes:
-      -postgres_data: ${PGDATA}
+      - postgres_data:${PGDATA}
     networks:
       - internal_network
   pg-admin:
-    container_name:networks:
-      - internal_network adminer
+    container_name: adminer
+    networks:
+      - internal_network 
     image: adminer
-    ports: ${ADMINER_PORT}:8080
+    ports: 
+      - "${ADMINER_PORT}:8080"
     
 
 volumes:
