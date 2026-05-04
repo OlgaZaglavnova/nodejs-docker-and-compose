@@ -13,7 +13,7 @@ import { User } from './users/entities/user.entity';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: '../env', // явно указываем путь к .env файлу
+      envFilePath: '../.env', // явно указываем путь к .env файлу
       isGlobal: true, // делаем глобальным, чтобы не импортировать везде
     }),
     TypeOrmModule.forRoot({

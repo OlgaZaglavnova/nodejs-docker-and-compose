@@ -14,7 +14,7 @@ import { LocalGuard } from '../common/guards/local.guard';
 import { User } from '../users/entities/user.entity';
 import { HashService } from '../hashing/hash.service';
 import { UsersService } from '../users/users.service';
-import { AuthorizedRequest } from '../common/types/authorized-request';
+import type { AuthorizedRequest } from '../common/types/authorized-request';
 
 @Controller()
 export class AuthController {
