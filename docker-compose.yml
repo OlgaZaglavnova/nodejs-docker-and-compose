@@ -4,7 +4,7 @@ services:
     build:
       context: backend
       dockerfile: Dockerfile
-    image: backend-kupipodariday
+    image: olgazaglavnova1979/backend-kupipodariday
     env_file: .env
     ports: 
       - "${BACKEND_PORT}:3000"
@@ -15,7 +15,7 @@ services:
     build:
       context: frontend
       dockerfile: Dockerfile
-    image: frontend-kupipodariday
+    image: olgazaglavnova1979/frontend-kupipodariday
     env_file: .env
     ports: 
       - "${FRONTEND_PORT}:80"

@@ -16,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy:docker": "scp ../docker-compose.yml ../.env ozadmin@81.26.187.162:/home/ozadmin/docker"
   },
   "eslintConfig": {
     "extends": [
