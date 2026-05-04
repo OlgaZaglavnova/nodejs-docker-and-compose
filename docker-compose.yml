@@ -15,7 +15,7 @@ services:
     build:
       context: frontend
       dockerfile: Dockerfile
-    image: olgazaglavnova1979/frontend-kupipodariday
+    image: olgazaglavnova1979/frontend-kupipodariday:0.0.1
     env_file: .env
     ports: 
       - "${FRONTEND_PORT}:80"
