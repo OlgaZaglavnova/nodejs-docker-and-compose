@@ -12,6 +12,7 @@ services:
       - pg
     networks:
       - internal_network
+    restart: unless-stopped
   frontend:
     container_name: frontend
     build:
@@ -25,6 +26,7 @@ services:
       - backend
     networks:
       - external_network
+    restart: unless-stopped
   pg:
     container_name: pg-kupipodariday
     image: postgres:18-alpine
@@ -33,6 +35,7 @@ services:
       - postgres_data:${PGDATA}
     networks:
       - internal_network
+    restart: unless-stopped
   pg-admin:
     container_name: adminer
     networks:
@@ -40,7 +43,7 @@ services:
     image: adminer
     ports: 
       - "${ADMINER_PORT}:8080"
-    
+    restart: unless-stopped
 
 volumes:
   postgres_data:
