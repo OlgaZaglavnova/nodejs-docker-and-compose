@@ -1,9 +1,13 @@
 import { NestFactory, Reflector } from '@nestjs/core';
+import cors from 'cors';
 import { AppModule } from './app.module';
 import { ClassSerializerInterceptor, ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+
+  app.use(cors());
+
   app.useGlobalPipes(new ValidationPipe());
 
   // Включаем CORS
