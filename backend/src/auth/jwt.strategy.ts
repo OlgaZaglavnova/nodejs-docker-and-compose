@@ -11,7 +11,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     private configService: ConfigService,
     private usersService: UsersService,
   ) {
-    const jwtSecret = configService.get<string>('jwt_secret');
+    const jwtSecret = configService.get<string>('JWT_SECRET');
     if (!jwtSecret) {
       throw new Error('JWT secret is not defined');
     }
