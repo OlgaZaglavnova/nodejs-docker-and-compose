@@ -7,5 +7,5 @@ Frontend:
 http://ozdocker.nomorepartiessite.ru  
 https://ozdocker.nomorepartiessite.ru  
 Backend:  
-http://api.ozdocker.nomorepartiessite.ru
+http://api.ozdocker.nomorepartiessite.ru  
 https://api.ozdocker.nomorepartiessite.ru  
